@@ -14,6 +14,6 @@ export function latLongToVector3(lat: number, long: number, radius: number): Vec
 
 export function processCountryCoordinates(coordinates: number[][][], radius: number): Vector3[][] {
   return coordinates.map(polygon =>
-    polygon[0].map(([long, lat]) => latLongToVector3(lat, long, radius))
+    polygon[0].map((long, lat) => latLongToVector3(lat, long, radius))
   );
 }
